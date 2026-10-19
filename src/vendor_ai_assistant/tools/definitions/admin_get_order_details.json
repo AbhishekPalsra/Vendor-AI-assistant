@@ -1,0 +1,15 @@
+{
+  "type": "function",
+  "function": {
+    "name": "admin_get_order_details",
+    "description": "Admin-only retrieval of one order with buyer, item, and shipment details.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "order_id": {"type": "string", "description": "Exact order ID.", "minLength": 1, "maxLength": 100}
+      },
+      "required": ["order_id"],
+      "additionalProperties": false
+    }
+  }
+}

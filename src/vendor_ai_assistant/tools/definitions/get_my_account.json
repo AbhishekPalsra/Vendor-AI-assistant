@@ -1,0 +1,13 @@
+{
+  "type": "function",
+  "function": {
+    "name": "get_my_account",
+    "description": "Retrieve the authenticated buyer's permitted account profile. Identity comes only from trusted request context.",
+    "parameters": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  }
+}

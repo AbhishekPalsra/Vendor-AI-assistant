@@ -1,0 +1,16 @@
+{
+  "type": "function",
+  "function": {
+    "name": "get_product_details",
+    "description": "Retrieve identity and pack details for one exact product. SKU is preferred when known.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "sku": {"type": "string", "description": "Exact SKU.", "maxLength": 50},
+        "product_name": {"type": "string", "description": "Exact or partial product name when SKU is unknown.", "maxLength": 200}
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  }
+}

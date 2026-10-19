@@ -1,0 +1,20 @@
+{
+  "type": "function",
+  "function": {
+    "name": "admin_search_inventory",
+    "description": "Admin-only search of detailed stock, reservations, reorder levels, and low-stock status.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "query": {"type": "string", "description": "Exact SKU or product name text.", "maxLength": 200},
+        "warehouse_city": {"type": "string", "maxLength": 100},
+        "region": {"type": "string", "maxLength": 100},
+        "low_stock_only": {"type": "boolean"},
+        "limit": {"type": "integer", "minimum": 1, "maximum": 50},
+        "offset": {"type": "integer", "minimum": 0}
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  }
+}

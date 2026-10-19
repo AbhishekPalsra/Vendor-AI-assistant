@@ -1,0 +1,21 @@
+{
+  "type": "function",
+  "function": {
+    "name": "get_order_history",
+    "description": "Retrieve item-level order history belonging only to the authenticated buyer.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "date_from": {"type": "string", "description": "Inclusive start date YYYY-MM-DD.", "maxLength": 10},
+        "date_to": {"type": "string", "description": "Inclusive end date YYYY-MM-DD.", "maxLength": 10},
+        "order_status": {"type": "string", "enum": ["Pending Confirmation", "Confirmed", "Allocated", "Picked", "Packed", "Shipped", "Delivered", "Cancelled", "Returned"]},
+        "payment_status": {"type": "string", "enum": ["Paid", "Pending", "Voided", "Refunded", "Partially Refunded"]},
+        "product": {"type": "string", "description": "SKU or product name text.", "maxLength": 200},
+        "limit": {"type": "integer", "minimum": 1, "maximum": 50},
+        "offset": {"type": "integer", "minimum": 0}
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  }
+}

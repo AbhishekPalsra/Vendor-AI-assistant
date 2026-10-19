@@ -1,0 +1,15 @@
+{
+  "type": "function",
+  "function": {
+    "name": "admin_get_buyer_details",
+    "description": "Admin-only retrieval of one buyer account and its order summary.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "buyer_id": {"type": "string", "description": "Exact buyer ID.", "minLength": 1, "maxLength": 100}
+      },
+      "required": ["buyer_id"],
+      "additionalProperties": false
+    }
+  }
+}

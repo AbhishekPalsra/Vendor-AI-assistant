@@ -1,0 +1,15 @@
+{
+  "type": "function",
+  "function": {
+    "name": "get_order_status",
+    "description": "Retrieve status and shipment details for an authenticated buyer's own order.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "order_id": {"type": "string", "description": "Order identifier.", "maxLength": 100}
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  }
+}

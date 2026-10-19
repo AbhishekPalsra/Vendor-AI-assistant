@@ -1,0 +1,18 @@
+{
+  "type": "function",
+  "function": {
+    "name": "get_price_quote",
+    "description": "Get an applicable customer or authenticated-account price quote for a product, quantity, and optional effective date. Account tier is never accepted as an argument.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "sku": {"type": "string", "description": "Exact SKU.", "maxLength": 50},
+        "product_name": {"type": "string", "description": "Product name when SKU is unknown.", "maxLength": 200},
+        "quantity": {"type": "integer", "description": "Requested number of units.", "minimum": 1, "maximum": 1000000},
+        "effective_date": {"type": "string", "description": "Optional ISO date YYYY-MM-DD.", "maxLength": 10}
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  }
+}

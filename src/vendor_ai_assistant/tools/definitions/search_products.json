@@ -1,0 +1,21 @@
+{
+  "type": "function",
+  "function": {
+    "name": "search_products",
+    "description": "Search the public product catalog. Returns product identity and pack details only, never prices, inventory, or sales data.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "query": {"type": "string", "description": "Product name text or an exact SKU.", "maxLength": 200},
+        "category": {"type": "string", "description": "Exact product category.", "maxLength": 100},
+        "brand": {"type": "string", "description": "Exact product brand.", "maxLength": 100},
+        "pack_size": {"type": "integer", "description": "Exact numeric pack size.", "minimum": 1},
+        "unit_type": {"type": "string", "description": "Exact unit such as g, kg, ml, L, or pack.", "enum": ["g", "kg", "ml", "L", "pack"]},
+        "limit": {"type": "integer", "description": "Maximum records to return.", "minimum": 1, "maximum": 50},
+        "offset": {"type": "integer", "description": "Pagination offset.", "minimum": 0}
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  }
+}

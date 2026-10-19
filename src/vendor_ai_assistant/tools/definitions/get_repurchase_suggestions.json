@@ -1,0 +1,19 @@
+{
+  "type": "function",
+  "function": {
+    "name": "get_repurchase_suggestions",
+    "description": "Suggest products from only the authenticated buyer's own completed purchase history, optionally with availability at a verified location.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "category": {"type": "string", "description": "Optional exact category.", "maxLength": 100},
+        "date_from": {"type": "string", "description": "Inclusive start date YYYY-MM-DD.", "maxLength": 10},
+        "date_to": {"type": "string", "description": "Inclusive end date YYYY-MM-DD.", "maxLength": 10},
+        "limit": {"type": "integer", "minimum": 1, "maximum": 50},
+        "offset": {"type": "integer", "minimum": 0}
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  }
+}

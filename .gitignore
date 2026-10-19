@@ -1,0 +1,3 @@
+.hadoop/
+__pycache__/
+*.py[cod]
